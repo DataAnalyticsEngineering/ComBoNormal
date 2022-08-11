@@ -1,0 +1,28 @@
+<Xdmf Version="2.2">
+  <Domain>
+    <Grid Collection="0" GridType="Uniform">
+      <Topology Dimensions="161 161 161" TopologyType="3DCORECTMesh" />
+      <Geometry GeometryType="ORIGIN_DXDYDZ">
+        <DataItem Dimensions="3" Format="XML" Name="Origin" NumberType="Float" Precision="4">-0.500000 -0.500000 -0.500000</DataItem>
+        <DataItem Dimensions="3" Format="XML" Name="Spacing" NumberType="Float" Precision="4">0.006250 0.006250 0.006250</DataItem>
+      </Geometry>
+      <Attribute AttributeType="Scalar" Center="Cell" Name="MATERIAL">
+        <DataItem
+                Dimensions="160 160 160"
+                Format="HDF"
+                NumberType="UChar">
+                prism.h5:/test/raw/img
+        </DataItem>
+      </Attribute>
+      <Attribute AttributeType="Scalar" Center="Cell" Name="IFACE">
+        <DataItem
+                Dimensions="160 160 160"
+                Format="HDF"
+                NumberType="Float"
+                Precision="8">
+                prism.h5:/test/raw/iface
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

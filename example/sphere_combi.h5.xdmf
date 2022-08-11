@@ -1,0 +1,46 @@
+<Xdmf Version="2.2">
+  <Domain>
+    <Grid Collection="0" GridType="Uniform">
+      <Topology Dimensions="21 21 21" TopologyType="3DCORECTMesh" />
+      <Geometry GeometryType="ORIGIN_DXDYDZ">
+        <DataItem Dimensions="3" Format="XML" Name="Origin" NumberType="Float" Precision="4">-0.500000 -0.500000 -0.500000</DataItem>
+        <DataItem Dimensions="3" Format="XML" Name="Spacing" NumberType="Float" Precision="4">0.050000 0.050000 0.050000</DataItem>
+      </Geometry>
+      <Attribute AttributeType="Scalar" Center="Cell" Name="VOL_FRAC">
+        <DataItem
+                Dimensions="20 20 20"
+                Format="HDF"
+                NumberType="Float"
+                Precision="8">
+                sphere.h5://combi/vol_frac
+        </DataItem>
+      </Attribute>
+      <Attribute AttributeType="Vector" Center="Cell" Name="NORMAL">
+        <DataItem
+                Dimensions="20 20 20 3"
+                Format="HDF"
+                NumberType="Float"
+                Precision="8">
+                sphere.h5://combi/normal
+        </DataItem>
+      </Attribute>
+      <Attribute AttributeType="Vector" Center="Cell" Name="NORMAL_CLASSIC">
+        <DataItem
+                Dimensions="20 20 20 3"
+                Format="HDF"
+                NumberType="Float"
+                Precision="8">
+                sphere.h5://combi/normal_classic
+        </DataItem>
+      </Attribute>
+      <Attribute AttributeType="Scalar" Center="Cell" Name="COMBIMAT">
+        <DataItem
+                Dimensions="20 20 20"
+                Format="HDF"
+                NumberType="UChar">
+                sphere.h5://combi/combimat
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

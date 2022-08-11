@@ -1,0 +1,46 @@
+<Xdmf Version="2.2">
+  <Domain>
+    <Grid Collection="0" GridType="Uniform">
+      <Topology Dimensions="33 33 33" TopologyType="3DCORECTMesh" />
+      <Geometry GeometryType="ORIGIN_DXDYDZ">
+        <DataItem Dimensions="3" Format="XML" Name="Origin" NumberType="Float" Precision="4">-0.500000 -0.500000 -0.500000</DataItem>
+        <DataItem Dimensions="3" Format="XML" Name="Spacing" NumberType="Float" Precision="4">0.031250 0.031250 0.031250</DataItem>
+      </Geometry>
+      <Attribute AttributeType="Scalar" Center="Cell" Name="VOL_FRAC">
+        <DataItem
+                Dimensions="32 32 32"
+                Format="HDF"
+                NumberType="Float"
+                Precision="8">
+                percolation.h5:/test/combi/vol_frac
+        </DataItem>
+      </Attribute>
+      <Attribute AttributeType="Vector" Center="Cell" Name="NORMAL">
+        <DataItem
+                Dimensions="32 32 32 3"
+                Format="HDF"
+                NumberType="Float"
+                Precision="8">
+                percolation.h5:/test/combi/normal
+        </DataItem>
+      </Attribute>
+      <Attribute AttributeType="Vector" Center="Cell" Name="NORMAL_CLASSIC">
+        <DataItem
+                Dimensions="32 32 32 3"
+                Format="HDF"
+                NumberType="Float"
+                Precision="8">
+                percolation.h5:/test/combi/normal_classic
+        </DataItem>
+      </Attribute>
+      <Attribute AttributeType="Scalar" Center="Cell" Name="COMBIMAT">
+        <DataItem
+                Dimensions="32 32 32"
+                Format="HDF"
+                NumberType="UChar">
+                percolation.h5:/test/combi/combimat
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>
