@@ -71,6 +71,7 @@ def supervoxel_normal(img, lap_img, l, vol_frac=None):
     assert(img.ndim == 3),'error: expecting 3D ndarray (0--> phase 0; else-->phase 1)'
     N       = np.array(img.shape)      # size of the supervoxel
     l_combi = l*np.array(img.shape)    # edge lengths of the supervoxel
+    TOL_l   = 1e-8*l_combi.mean()      # tolerance
     # assemble and solve the least squares problem
     w       = np.abs(lap_img)          # weights
     iface   = np.where(w > 1e-5)       # find the interface voxels
@@ -112,7 +113,17 @@ def supervoxel_normal(img, lap_img, l, vol_frac=None):
         normal_xyz  *= -1.
 
     normal_classic = np.array([x1_c, y1_c, z1_c])
-    normal_classic = -normal_classic / inline_norm(normal_classic)
+    l_classic = inline_norm(normal_classic)
+    if(l_classic<TOL_l):
+        print(normal_classic, l_classic)
+        print(img.shape)
+        if(img.size < 100):
+            print(img)
+        print('combo normal: ',normal_xyz)
+        l_classic = 1.
+        normal_classic = np.array([1.,0.,0.])
+    else:
+        normal_classic = -normal_classic / l_classic
     return normal_xyz, normal_classic
 
 
