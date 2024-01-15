@@ -3,7 +3,7 @@
 Felix Fritzen <fritzen@simtech.uni-stuttgart.de>
 
 ### Related publication
-S. Keshav, F. Fritzen, M. Kabel: FFT-based Homogenization at Finite Strains using Composite Boxels (ComBo), submitted to Computational Mechanics on April 28, 2022 *(arXiv preprint: http://arxiv.org/abs/2204.13624)*
+S. Keshav, F. Fritzen, M. Kabel: FFT-based Homogenization at Finite Strains using Composite Boxels (ComBo), published in Computational Mechanics 71, p. 191-212, 2023 *(final article: https://doi.org/10.1007/s00466-022-02232-4 (Open Access))*
 
 
 ## Scope
